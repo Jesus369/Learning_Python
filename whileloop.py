@@ -1,24 +1,24 @@
-# # while number is less than 11, prompt the user to keep entering numbers
-# # Untill it is equal to or greater than 11
-# number = 0
-# triesTaken = 1
-# while number < 11:
-#     number = int(raw_input(
-#         "I'm guessing a range of numbers between x an y, and ranges from 1 - 20. Select only one number from that range: "))
-#     print("You have now taken {0} tries".format(triesTaken))
-#     triesTaken += 1
-# print("You guessed correctly! I was guessing a number greater than 10")
+# while number is less than 11, prompt the user to keep entering numbers
+# Untill it is equal to or greater than 11
+number = 0
+triesTaken = 1
+while number < 11:
+    number = int(raw_input(
+        "I'm guessing a range of numbers between x an y, and ranges from 1 - 20. Select only one number from that range: "))
+    print("You have now taken {0} tries".format(triesTaken))
+    triesTaken += 1
+print("You guessed correctly! I was guessing a number greater than 10")
 
-# # The user must select a correct exit to break the while loop, or just
-# # enter "quit" to break the while loop
-# availableExit = ["east", "south east", "north west"]
-# chosenExit = ""
-# while chosenExit not in availableExit:
-#     chosenExit = raw_input("Choose a direction: ").lower()
-#     if chosenExit == "quit":
-#         print("Glad to have you play the game!")
-#         break
-#     print("You found your way out!")
+# The user must select a correct exit to break the while loop, or just
+# enter "quit" to break the while loop
+availableExit = ["east", "south east", "north west"]
+chosenExit = ""
+while chosenExit not in availableExit:
+    chosenExit = raw_input("Choose a direction: ").lower()
+    if chosenExit == "quit":
+        print("Glad to have you play the game!")
+        break
+    print("You found your way out!")
 
 # Give the user an unlimited amount of guesses until they guess the correct answer
 import random
@@ -40,3 +40,4 @@ while guess != answer:
         print("You must guess lower!")
     else:
         print("You've guessed correctly!")
+
